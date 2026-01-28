@@ -1,6 +1,6 @@
 
 body {
-    background-color: blue;
+    background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -80,8 +80,11 @@ body {
 .search-bar {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap;
+   align-items: center;
     margin-bottom: 15px;
+}
+.search-bar .form-control {
+    max-width: 300px;   
 }
 
 
@@ -115,6 +118,11 @@ body {
 
 
 @media (max-width: 992px) {
+    .container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
     .table th,
     .table td {
         font-size: 13px;
@@ -127,39 +135,85 @@ body {
 }
 
 
+
 @media (max-width: 768px) {
 
-    .page-title {
-        text-align: center;
+    .card {
+        padding: 12px;
     }
 
-    .search-bar {
-        flex-direction: column;
+    .table {
+        border: 0;
     }
 
-    .table-responsive {
-        overflow-x: auto;
+    .table thead {
+        display: none; 
     }
 
-    .table th,
+    .table tr {
+        display: block;
+        margin-bottom: 12px;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 10px;
+        background: #fff;
+    }
+
     .table td {
-        font-size: 12px;
-        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 6px 4px;
+        border: none;
+        font-size: 13px;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #555;
+    }
+
+   
+    .table td:last-child {
+        justify-content: flex-start;
+        gap: 8px;
     }
 
     .btn-warning,
     .btn-danger {
-        margin-bottom: 5px;
+        width: auto;
+        font-size: 12px;
+        padding: 5px 10px;
     }
 }
 
-
 @media (max-width: 480px) {
+
     .navbar-brand {
-        font-size: 16px;
+        font-size: 15px;
+    }
+
+    .page-title {
+        font-size: 20px;
     }
 
     .btn {
         width: 100%;
+        font-size: 14px;
+    }
+
+    .form-control,
+    .form-select {
+        font-size: 14px;
+    }
+
+    .alert {
+        font-size: 13px;
+    }
+
+    .footer {
+        font-size: 12px;
     }
 }

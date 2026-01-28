@@ -54,7 +54,7 @@ $success = $_GET['success'] ?? '';
     <?php endif; ?>
 
    
-<form class="mb-3" method="get">
+<form class="mb-3 d-flex align-items-center gap-2" method="get">
     <input type="text" name="search" id="searchInput" placeholder="Search by name or diagnosis" class="form-control" value="">
     <button type="submit" class="btn btn-primary mt-2">Search</button>
 </form>
