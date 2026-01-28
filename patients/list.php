@@ -19,7 +19,7 @@ $likeSearch = "%$search%";
 
 
 $sqlCount = "SELECT COUNT(*) as count FROM patients WHERE (patient_name LIKE ? OR diagnosis LIKE ?)";
-if ($ageFilter == '40') $sqlCount .= " AND age > 40";
+
 
 $stmt = $conn->prepare($sqlCount);
 $stmt->bind_param("ss", $likeSearch, $likeSearch);
@@ -32,7 +32,7 @@ $sql = "SELECT p.*, d.doctor_name, d.specialization
         FROM patients p
         LEFT JOIN doctors d ON p.doctor_id = d.id
         WHERE (p.patient_name LIKE ? OR p.diagnosis LIKE ?)";
-if ($ageFilter == '40') $sql .= " AND p.age > 40";
+
 $sql .= " ORDER BY $order $sort LIMIT ?, ?";
 
 $stmt = $conn->prepare($sql);

@@ -14,7 +14,7 @@ if(!$patient) {
 }
 
 
-$doctors = $conn->query("SELECT id, doctor_name FROM doctors ORDER BY doctor_name ASC");
+$doctors = $conn->query("SELECT id, doctor_name FROM doctors ORDER BY doctor_name");
 
 $error = "";
 

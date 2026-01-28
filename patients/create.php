@@ -6,7 +6,7 @@ $name = $email = $phone = $age = $gender = $diagnosis = $doctor_id = "";
 $errors = [];
 
 
-$doctors = $conn->query("SELECT id, doctor_name FROM doctors ORDER BY doctor_name ASC");
+$doctors = $conn->query("SELECT id, doctor_name FROM doctors ORDER BY doctor_name ");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name      = trim($_POST['patient_name'] ?? '');
