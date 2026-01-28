@@ -1,0 +1,165 @@
+
+body {
+    background-color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+.navbar {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.page-title {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.form-control,
+.form-select {
+    border-radius: 6px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: none;
+}
+
+
+.btn {
+    border-radius: 6px;
+}
+
+.btn-primary {
+    padding: 8px 18px;
+}
+
+.btn-warning,
+.btn-danger {
+    padding: 6px 14px;
+    font-size: 14px;
+}
+
+
+.table {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table td {
+    font-size: 14px;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+
+.pagination {
+    justify-content: center;
+}
+
+.page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.page-link {
+    color: #0d6efd;
+}
+
+.alert {
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 40px;
+}
+
+
+
+
+@media (max-width: 992px) {
+    .table th,
+    .table td {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .page-title {
+        text-align: center;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .table th,
+    .table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .btn-warning,
+    .btn-danger {
+        margin-bottom: 5px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 16px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
