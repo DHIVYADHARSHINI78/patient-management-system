@@ -46,7 +46,22 @@ $success = $_GET['success'] ?? '';
     </h2>
 
     <?php if($success): ?>
-        <div class="alert alert-success"><?= htmlspecialchars($success) ?></div>
+      <div id="success-alert" class="alert alert-success" style="transition: opacity 1s; opacity: 1;">
+        <?= htmlspecialchars($success) ?>
+    </div>
+
+    <script>
+       
+        setTimeout(() => {
+            const alert = document.getElementById('success-alert');
+            if(alert) {
+                alert.style.opacity = '0'; 
+                setTimeout(() => {
+                    alert.style.display = 'none'; 
+                }, 1000); 
+            }
+        }, 10000); 
+    </script>
     <?php endif; ?>
 
     <form class="mb-3 d-flex gap-2" method="get">

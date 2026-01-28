@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($email && !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Invalid email format";
     if ($phone && !preg_match('/^[0-9]{10}$/', $phone)) $errors[] = "Phone number must be 10 digits";
-    if ($age && (!is_numeric($age) || $age < 1 || $age > 120)) $errors[] = "Age must be between 1 and 120";
+    if ($age && (!is_numeric($age) || $age < 1 || $age > 90)) $errors[] = "Age must be between 1 and 90";
 
     if ($email) {
         $stmt = $conn->prepare("SELECT id FROM patients WHERE email=?");
